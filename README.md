@@ -20,7 +20,7 @@ MMM-YoctoPuceTemp is a MagicMirror module designed to display temperature data f
 	{
 	    module: "MMM-YoctoPuceTemp",
 	    position: "top_right", // You can adjust the position
-     	    header: "Inside Temp",
+     header: "Inside Temp",
 	    config: {
 	        updateInterval: 60000 // Optional, default update interval is 60 seconds
 	    }
