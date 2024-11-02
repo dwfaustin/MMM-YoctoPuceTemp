@@ -15,28 +15,26 @@ MMM-YoctoPuceTemp is a MagicMirror module designed to display temperature data f
    cd ~/MagicMirror/modules
    git clone https://github.com/dwfaustin/MMM-YoctoPuceTemp.git
 
-
-
-
 ## Add Module to MagicMirror/config/config.js
 
-{
-    module: "MMM-YoctoPuceTemp",
-    position: "top_right", // You can adjust the position
-    config: {
-        updateInterval: 60000 // Optional, default update interval is 60 seconds
-    }
-},
+	{
+	    module: "MMM-YoctoPuceTemp",
+	    position: "top_right", // You can adjust the position
+	    config: {
+	        updateInterval: 60000 // Optional, default update interval is 60 seconds
+	    }
+	},
 
 ## Customize the CSS (Optional)
-If you want to customize the appearance, modify MMM-YoctoPuceTemp.css
+If you want to customize the appearance, modify MMM-YoctoPuceTemp.css:
 
-.MMM-YoctoPuceTemp div {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
 
-##Usage
+	.MMM-YoctoPuceTemp div {
+	    font-size: 1.2em;
+	    margin-bottom: 10px;
+	}
+
+## Usage
 
 The module will fetch data from the YoctoPuce API URL provided in the configuration file. Make sure to adjust the apiUrl setting in MMM-YoctoPuceTemp.js if necessary. By default, the apiUrl points to example: http://<IPAddressOfYourYoctoPuceDevice>:<port>/api.  Or you can use the full api link that includes the serial number e.g. http://ipaddress:port/bySerial/<ReplaceWithYourSerialNumber>/api
 
