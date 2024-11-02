@@ -15,6 +15,8 @@ MMM-YoctoPuceTemp is a MagicMirror module designed to display temperature data f
    cd ~/MagicMirror/modules
    git clone https://github.com/dwfaustin/MMM-YoctoPuceTemp.git
 
+As there is no package.json, no npm install is required.  Clone the repo, navigate to the MMM-YoctoPuceTemp folder, edit the MMM-YoctoPuceTemp.js file and update to your URL. 
+
 ## Add Module to MagicMirror/config/config.js
 
 	{
