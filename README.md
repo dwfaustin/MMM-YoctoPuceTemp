@@ -10,6 +10,7 @@ MMM-YoctoPuceTemp is a MagicMirror module designed to display temperature data f
 ## Installation
 
 1. **Clone the Repository**  
+
    Navigate to your MagicMirror modules folder:
    ```bash
    cd ~/MagicMirror/modules
@@ -29,12 +30,30 @@ As there is no package.json, no npm install is required.  Clone the repo, naviga
 	},
 
 ## Customize the CSS (Optional)
-If you want to customize the appearance, modify MMM-YoctoPuceTemp.css:
+The CSS code will increase the font size of the header and reduce the font size lowest and highest value.  The CSS file MMM-YoctoPuceTemp.css is preconfigured but the settings are listed below:
 
 
+	/* Style for the entire module */
 	.MMM-YoctoPuceTemp div {
 	    font-size: 1.2em;
 	    margin-bottom: 10px;
+	}
+	
+	/* Increase the font size of the header */
+	.MMM-YoctoPuceTemp .module-header {
+	    font-size: 1.5em; /* Adjust as desired */
+	    font-weight: bold;
+	}
+	
+	/* Style for current temperature */
+	.MMM-YoctoPuceTemp .currentTemp {
+	    font-size: 1.2em; /* Default size */
+	}
+	
+	/* Smaller font for lowest and highest temperatures */
+	.MMM-YoctoPuceTemp .lowestTemp,
+	.MMM-YoctoPuceTemp .highestTemp {
+	    font-size: 0.9em; /* Adjust as desired */
 	}
 
 ## Usage
