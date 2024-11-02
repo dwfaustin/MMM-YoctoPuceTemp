@@ -5,7 +5,7 @@ Module.register("MMM-YoctoPuceTemp", {
 
     // Default module configuration
     defaults: {
-         apiUrl: "http://<changeIP>:<port>/bySerial/<yourserialnumber>/api", //or you can just use the default URL: <changeIP>:<port>/api
+        apiUrl: "http://192.168.132.201:4444/bySerial/TMPSENS1-1178BE/api",
         updateInterval: 60000 // Update every 60 seconds
     },
 
@@ -58,33 +58,31 @@ Module.register("MMM-YoctoPuceTemp", {
 
     // Override DOM generator to display the temperature data
     getDom: function() {
-        const wrapper = document.createElement("div");
+    const wrapper = document.createElement("div");
 
-        // Show loading if data is not yet available
-        if (this.currentValue === null) {
-            wrapper.innerHTML = "Loading temperature data...";
-            return wrapper;
-        }
-
-        // Create elements for current, lowest, and highest temperatures
-        const currentTemp = document.createElement("div");
-        currentTemp.innerHTML = `Current Temperature: ${this.currentValue}°F`;
-
-        const lowestTemp = document.createElement("div");
-        lowestTemp.innerHTML = `Lowest Temperature: ${this.lowestValue}°F`;
-
-        const highestTemp = document.createElement("div");
-        highestTemp.innerHTML = `Highest Temperature: ${this.highestValue}°F`;
-
-        // Append to wrapper
-        wrapper.appendChild(currentTemp);
-        wrapper.appendChild(lowestTemp);
-        wrapper.appendChild(highestTemp);
-
+    if (this.currentValue === null) {
+        wrapper.innerHTML = "Loading temperature data...";
         return wrapper;
     }
+
+    // Create elements with specific classes for CSS targeting
+    const currentTemp = document.createElement("div");
+    currentTemp.className = "currentTemp";
+    currentTemp.innerHTML = `Current Temperature: ${this.currentValue}°F`;
+
+    const lowestTemp = document.createElement("div");
+    lowestTemp.className = "lowestTemp";
+    lowestTemp.innerHTML = `Lowest Temperature: ${this.lowestValue}°F`;
+
+    const highestTemp = document.createElement("div");
+    highestTemp.className = "highestTemp";
+    highestTemp.innerHTML = `Highest Temperature: ${this.highestValue}°F`;
+
+    wrapper.appendChild(currentTemp);
+    wrapper.appendChild(lowestTemp);
+    wrapper.appendChild(highestTemp);
+
+    return wrapper;
+}
+
 });
-
-       
-
-
