@@ -1,4 +1,22 @@
+/* Style for the entire module */
 .MMM-YoctoPuceTemp div {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+/* Increase the font size of the header */
+.MMM-YoctoPuceTemp .module-header {
+    font-size: 1.5em; /* Adjust as desired */
+    font-weight: bold;
+}
+
+/* Style for current temperature */
+.MMM-YoctoPuceTemp .currentTemp {
+    font-size: 1.2em; /* Default size */
+}
+
+/* Smaller font for lowest and highest temperatures */
+.MMM-YoctoPuceTemp .lowestTemp,
+.MMM-YoctoPuceTemp .highestTemp {
+    font-size: 0.9em; /* Adjust as desired */
 }
