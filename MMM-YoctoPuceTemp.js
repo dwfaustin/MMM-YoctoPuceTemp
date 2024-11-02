@@ -5,7 +5,7 @@ Module.register("MMM-YoctoPuceTemp", {
 
     // Default module configuration
     defaults: {
-        apiUrl: "http://192.168.132.201:4444/bySerial/TMPSENS1-1178BE/api",
+        apiUrl: "http://<yourIPAddress>:<port>/bySerial/<yourserialID>/api", //optional use can be <ipaddress>:<port>/api
         updateInterval: 60000 // Update every 60 seconds
     },
 
